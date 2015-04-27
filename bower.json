@@ -1,0 +1,27 @@
+{
+  "name": "sherllon-blog",
+  "version": "0.0.0",
+  "authors": [
+    "Sherllon Alves <sherllon@gmail.com>"
+  ],
+  "description": "Personal Blog",
+  "main": "app.js",
+  "moduleType": [
+    "amd",
+    "es6",
+    "node"
+  ],
+  "license": "MIT",
+  "homepage": "www.sherllon.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "marionette": "~2.4.1"
+  }
+}

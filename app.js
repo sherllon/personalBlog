@@ -7,20 +7,29 @@ var express = require('express')
   , routes = require('./routes')
   , user = require('./routes/user')
   , http = require('http')
-  , path = require('path');
+  , path = require('path')
+  , exphbs  = require('express-handlebars')
+  , hbs = exphbs.create({ /* config */
+					  	layoutsDir: "templates/layouts/",
+					  	defaultLayout: "layout",
+					  	extname:".hbs"
+					  });
 
 var app = express();
 
+app.engine('hbs', hbs.engine);
+
 // all environments
 app.set('port', process.env.PORT || 3000);
-app.set('views', __dirname + '/views');
-app.set('view engine', 'handlebars');
+app.set('views', __dirname + '/templates');
+app.set('view engine', 'hbs');
 app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
+
 
 // development only
 if ('development' == app.get('env')) {

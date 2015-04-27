@@ -7,6 +7,13 @@
   },
   "dependencies": {
     "express": "3.2.6",
-    "express-handlebars": "*"
+    "express-handlebars": "*",
+    "bower": "*"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-concat": "^2.5.2",
+    "gulp-debug": "^2.0.1",
+    "gulp-uglifyjs": "^0.6.1"
   }
 }
