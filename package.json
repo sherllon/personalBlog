@@ -14,6 +14,11 @@
     "gulp": "^3.8.11",
     "gulp-concat": "^2.5.2",
     "gulp-debug": "^2.0.1",
-    "gulp-uglifyjs": "^0.6.1"
+    "gulp-filter": "^2.0.2",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-ruby-sass": "^1.0.5",
+    "gulp-uglifyjs": "^0.6.1",
+    "main-bower-files": "^2.7.0"
   }
 }

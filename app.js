@@ -12,7 +12,16 @@ var express = require('express')
   , hbs = exphbs.create({ /* config */
 					  	layoutsDir: "templates/layouts/",
 					  	defaultLayout: "layout",
-					  	extname:".hbs"
+					  	extname:".hbs",
+					  	helpers: {
+					  	    section: function(name, options){
+					  	        if(!this._sections) {
+					  	        	this._sections = {};
+					  	        }
+					  	        this._sections[name] = options.fn(this);
+					  	        return null;
+					  	    }
+					  	}
 					  });
 
 var app = express();
