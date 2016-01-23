@@ -1,0 +1,466 @@
+
+/* ----------------------------------------------------
+    GLobal
+------------------------------------------------------- */
+
+body {
+    overflow-x: hidden;
+}
+@media (min-width:600px ){
+.circ-bg {
+    height: 328px;
+    margin-top: 23px;
+}
+section#experience {
+    margin-top: -85px;
+}
+}
+.webicon.svg-webicon {
+    width: 64px;
+}
+
+.sm-title {
+    position: relative;
+    top: 26px;
+    border-bottom: 1px solid;
+    padding-bottom: 25px;
+}
+
+.sm-title-ex{
+    position: relative;
+    top: 74px;
+    margin-top: 50px;
+    margin-bottom: 125px;
+}
+
+@media (max-width:768px ){
+    .circ-bg {
+        height: 400px;
+        margin-top: -49px;
+        margin-bottom: 150px;
+    }
+    .circ-bg.software-circle {
+        position: relative;
+        margin-bottom: 250px;
+    }
+    #filter-list {
+        float: none !important;
+        text-align: center !important;
+        width: 265px !important;
+        margin: 0 auto !important;
+    }
+    .circ-bg.exp-circ {
+        margin-top: -160px;
+    }
+    .descrip-text {
+    margin-top: 329px;
+}
+}
+
+p {
+    font-size: 20px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+}
+
+p.small {
+    font-size: 16px;
+}
+
+a,
+a:hover,
+a:focus,
+a:active,
+a.active {
+    outline: 0;
+    color: #C1C6C5;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    text-transform: uppercase;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+}
+
+hr.star-light,
+hr.star-primary {
+    margin: 25px auto 30px;
+    padding: 0;
+    max-width: 250px;
+    border: 0;
+    border-top: solid 5px;
+    text-align: center;
+}
+
+hr.star-light:after,
+hr.star-primary:after {
+    content: "\f005";
+    display: inline-block;
+    position: relative;
+    top: -.8em;
+    padding: 0 .25em;
+    font-family: FontAwesome;
+    font-size: 2em;
+}
+
+hr.star-light {
+    border-color: #fff;
+}
+
+hr.star-light:after {
+    color: #fff;
+    background-color: #18bc9c;
+}
+
+hr.star-primary {
+    border-color: #2c3e50;
+}
+
+hr.star-primary:after {
+    color: #2c3e50;
+    background-color: #fff;
+}
+
+.img-centered {
+    margin: 0 auto;
+}
+.circular-bar {
+    margin: 86px auto 0;
+    display: table;
+}
+
+
+/* ----------------------------------------------------
+    Header
+------------------------------------------------------- */
+
+header {
+    text-align: center;
+    color: #000;
+    background: url(../../img/header_background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.img-home {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+    
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+    
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  .img-home {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
+
+header .container {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+header img {
+    display: block;
+    margin: 0 auto 20px;
+}
+
+header .intro-text .name {
+    display: block;
+    text-transform: uppercase;
+    font-family: 'Roboto Slab', serif;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+header .intro-text .skills {
+    font-size: 1.25em;
+    font-weight: 300;
+}
+
+@media(min-width:768px) {
+    header .container {
+        padding-top: 200px;
+        padding-bottom: 186px;
+    }
+
+    header .intro-text .name {
+        font-size: 4.75em;
+    }
+
+    header .intro-text .skills {
+        font-size: 1.75em;
+    }
+}
+
+
+/* ----------------------------------------------------
+    Call to action
+------------------------------------------------------- */
+
+
+section {
+    padding: 70px 0;
+}
+
+.icon-text span {
+    font-size: 35px;
+}
+section#call-to-action {
+    background-color: black;
+    color: white;
+}
+
+section h2 {
+    margin: 0;
+    font-size: 3em;
+}
+
+section.success {
+    color: #fff;
+    background: #18bc9c;
+}
+
+section.success a,
+section.success a:hover,
+section.success a:focus,
+section.success a:active,
+section.success a.active {
+    outline: 0;
+    color: #2c3e50;
+}
+
+@media(max-width:767px) {
+    section {
+        padding: 75px 0;
+    }
+
+    section.first {
+        padding-top: 75px;
+    }
+    hr{
+        visibility: hidden;
+    }
+    .social {
+        margin-top: 9px;
+    }
+}
+/* ----------------------------------------------------
+    Hire Job
+------------------------------------------------------- */
+
+.hire-job{
+    background-color: ghostwhite;
+    padding: 50px 0;
+    margin-top: -68px;
+}
+
+button.hire-button.text-center {
+    margin: 0 auto;
+    display: block;
+    background-color:transparent;
+    border: 1px solid grey;
+    padding: 5px 10px;
+}
+
+/* ----------------------------------------------------
+    Blocks
+------------------------------------------------------- */
+
+h3.title-text {
+    font-size: 19px;
+    font-weight: 100;
+}
+
+/* ----------------------------------------------------
+    Testimonial
+------------------------------------------------------- */
+@media (min-width: 768px){
+    .test-bg {
+        background-color: ghostwhite;
+        height: 328px;
+    }
+    .circ-bg {
+        background-color: ghostwhite;
+    }
+}
+
+p.job-testimonial {
+    font-size: 17px;
+}
+
+.next-client{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.client {
+    cursor: pointer;
+}
+div.test-1,.test-2,.test-3 {
+    color: black;
+    padding: 17px 30px 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.text-testimonial {
+    padding: 15px;
+    position: relative;
+    top: 31%;
+    text-align: justify;
+}
+img.img-test {
+    position: relative;
+    top: 30px;
+}
+
+
+.client.redmark {
+    border-right: 3px solid red;
+    margin-right: -15px;
+    padding-right: 15px;
+}
+
+
+/* ----------------------------------------------------
+    Experience
+------------------------------------------------------- */
+
+.text-side-right,.text-side-left{
+    text-align: center;
+}
+
+@media (min-width: 769px){
+
+   .text-side-right{
+    text-align: right;
+    } 
+    .text-side-left {
+    text-align: left;
+    } 
+}
+
+p.text-circle {
+    position: relative;
+    top: 130px;
+    text-align: center;
+    font-size: 17px;
+}
+
+
+/* ----------------------------------------------------
+    Contact Section
+------------------------------------------------------- */
+
+section#contact {
+    padding-bottom: 0;
+}
+
+
+.form-group label{
+    /*color: white;*/
+}
+.form-control{
+    background: transparent;
+}
+.contact-bg {
+    background: url(../img/contact-bg.jpg) no-repeat;
+    padding: 41px;
+    background-size:cover;
+    display: table;
+    width: 100%;
+}
+
+/* ----------------------------------------------------
+    Footer
+------------------------------------------------------- */
+
+
+section#footer {
+    background-color: black;
+    padding: 19px 0;
+}
+
+footer {
+    color: #fff;
+}
+
+footer h3 {
+    margin-bottom: 30px;
+}
+
+footer .footer-above {
+    padding-top: 50px;
+    background-color: #2c3e50;
+}
+
+footer .footer-col {
+    margin-bottom: 50px;
+}
+
+footer .footer-below {
+    padding: 25px 0;
+    background-color: #233140;
+}
+
+.social span a {
+    padding-right: 20px;
+}
+button.btn.btn-form {
+    width: 121px;
+    background-color: transparent;
+    border: 1px solid;
+}
+button.btn.btn-form:hover{
+    border: 1px solid black;
+    color: black;
+}
+
+.btn-social {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 20px;
+    line-height: 45px;
+}
+
+.btn:focus,
+.btn:active,
+.btn.active {
+    outline: 0;
+}
+
+.scroll-top {
+    z-index: 1049;
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+    width: 50px;
+    height: 50px;
+}
+
+.scroll-top .btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.scroll-top .btn:focus {
+    outline: 0;
+}

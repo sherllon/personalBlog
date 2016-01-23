@@ -1,48 +1,55 @@
+'use strict';
+
 // Include gulp
 var gulp = require('gulp');
 
 //Include plugins
-var uglify = require('gulp-uglifyjs'),
+var uglify = require('gulp-uglify'),
 	debug = require('gulp-debug'),
-	sass = require('gulp-ruby-sass'),
+	sass = require('gulp-sass'),
 	rename = require('gulp-rename'),
 	concat = require('gulp-concat'),
 	mainBowerFiles = require('main-bower-files'),
 	plugins = require("gulp-load-plugins")({
 		pattern: ['gulp-*', 'gulp.*', 'main-bower-files'],
 		replaceString: /\bgulp[\-.]/
-	});
+	}),
+	sourcemaps = require('gulp-sourcemaps');;
 
 
 
 
 // Concatenate JS Files
 gulp.task('scripts', function () {
-    gulp.src("public/**/*.js")
+    gulp.src("public/src/js/common/*.js")
         //.pipe(debug())
-        .pipe(uglify('public/**/*.js',{
+        .pipe(uglify({
             output: {
                 beautify: false
             },
             outSourceMap: true,
-            basePath: 'public',
+//            basePath: 'public',
             sourceRoot: '/'
         }))
         .pipe(gulp.dest('public/build/js'));
 });
 
 gulp.task('sass', function() {
-    return sass('public/src/css/scss/', {style: 'compressed'})
-        .pipe(concat('main.min.css'))
+    gulp.src('public/src/css/**/*.*css')
+    	//.pipe(debug())
+    	.pipe(sourcemaps.init())
+        .pipe(sass().on('error', sass.logError))
+        .pipe(sourcemaps.write())
+    	.pipe(concat('main.min.css'))
         .pipe(gulp.dest('public/build/css'));
 });
 
 gulp.task('bower', function() {
 	  gulp.src( mainBowerFiles())
 	  	.pipe(plugins.filter('*.js'))
-		.pipe(plugins.concat('main.js'))
-		.pipe(plugins.uglifyjs())
-	    .pipe(gulp.dest('public/src/js/vendor/'));
+		.pipe(plugins.concat('vendor.js'))
+		.pipe(plugins.uglify())
+	    .pipe(gulp.dest('public/build/js/vendor/'));
 	});
 
 
