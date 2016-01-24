@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "postinstall": "gulp default",
+    "postinstall": "gulp prod",
     "start": "node app.js"
   },
   "dependencies": {
@@ -11,9 +11,7 @@
     "express-handlebars": "*",
     "bower": "*",
     "gulp": "^3.8.11",
-    "gulp-connect": "^2.3.1",
-  
-    
+    "gulp-connect": "^2.3.1"
     "gulp-concat": "^2.5.2",
     "gulp-debug": "^2.0.1",
     "gulp-filter": "^2.0.2",
@@ -22,7 +20,9 @@
     "gulp-ruby-sass": "^1.0.5",
     "gulp-sass": "^2.1.1",
     "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^1.5.1",
+    "gulp-uglify": "^1.5.1"
+    },
+  "devDependencies": {
     "main-bower-files": "^2.7.0"
   }
 }

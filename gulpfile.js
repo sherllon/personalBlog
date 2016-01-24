@@ -14,7 +14,8 @@ var uglify = require('gulp-uglify'),
 		pattern: ['gulp-*', 'gulp.*', 'main-bower-files'],
 		replaceString: /\bgulp[\-.]/
 	}),
-	sourcemaps = require('gulp-sourcemaps');;
+	sourcemaps = require('gulp-sourcemaps'),
+	connect = require('gulp-connect');
 
 
 
@@ -52,6 +53,14 @@ gulp.task('bower', function() {
 	    .pipe(gulp.dest('public/build/js/vendor/'));
 	});
 
+//gulp.task('serverprod', function() {
+//	  connect.server({
+//	    root: ["public"],
+//	    port: process.env.PORT || 5000, // localhost:5000
+//	    livereload: false
+//	  });
+//	});
 
 // Default Task
 gulp.task('default', ['scripts', 'sass', 'bower']);
+gulp.task('prod', ['scripts', 'sass']);
